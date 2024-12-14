@@ -54,10 +54,6 @@ PCA significantly improved the performance of both models.
 ---
 
 ## Setup Instructions
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/yourusername/mnist-pca-knn-svm.git
-   cd mnist-pca-knn-svm
    
 Install the required R packages:
 install.packages(c("class", "caret", "factoextra", "tidytable", "ggplot2", "e1071"))
