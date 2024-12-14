@@ -73,6 +73,5 @@ Explore advanced models like Convolutional Neural Networks (CNNs) for further ac
 Apply additional feature engineering techniques like LDA or hyperparameter tuning.
 Test the models on other datasets to generalize the findings.
 
-## Contributing
-Contributions are welcome! Feel free to fork this repository and submit a pull request. For major changes, please open an issue first to discuss the proposed changes.
+
 
