@@ -1,56 +1,82 @@
-Handwritten Digit Classification Using Machine Learning
-This project demonstrates solid machine learning concepts by classifying handwritten digits from the MNIST dataset using Principal Component Analysis (PCA) for dimensionality reduction and two classification models: k-Nearest Neighbors (k-NN) and Support Vector Machine (SVM).
+# MNIST Classification with k-NN and SVM Using PCA
 
-Key Highlights:
-Dataset: MNIST handwritten digits (28x28 grayscale images).
-Preprocessing: Normalization and PCA for dimensionality reduction.
-Algorithms:
-k-NN: Explored with different values of k.
-SVM: Implemented with and without PCA.
-Evaluation: Comparison using accuracy, confusion matrices, and kappa statistics.
-Project Features:
-Preprocessing and Data Exploration:
+This project demonstrates the application of machine learning techniques on the MNIST dataset to classify handwritten digits. It includes preprocessing, dimensionality reduction using Principal Component Analysis (PCA), and classification using k-Nearest Neighbors (k-NN) and Support Vector Machines (SVM). The project is implemented in R and showcases the impact of PCA on classification performance.
 
-Normalized pixel values to a 0-1 scale.
-Checked and confirmed data integrity.
-Dimensionality Reduction:
+---
 
-Applied PCA to visualize data in lower dimensions.
-Retained 87 principal components to capture 90% variance.
-Classification Models:
+## Introduction
+The goal of this project is to classify handwritten digits from the MNIST dataset using k-NN and SVM, enhanced with PCA. The focus is on:
+- Exploring PCA for dimensionality reduction.
+- Comparing the performance of k-NN and SVM with and without PCA.
+- Evaluating model accuracy and error rates.
 
-Implemented k-NN with optimized k values using the elbow method.
-Applied SVM with radial kernel for robust classification.
-Performance Evaluation:
+---
 
-Compared models before and after PCA.
-Measured performance using confusion matrices, accuracy, and error rates.
-Results:
-Without PCA:
+## Dataset
+The MNIST dataset is used, consisting of:
+- **Training set:** 60,000 grayscale images (28x28 pixels each).
+- **Test set:** 10,000 grayscale images.
 
-k-NN: Accuracy ~90.15% (k=3).
-SVM: Accuracy ~88.42%.
-With PCA:
+The dataset is normalized, and PCA is applied to reduce dimensionality.
 
-PCA-based k-NN: Accuracy ~97.4%.
-PCA-based SVM: Accuracy ~98.17%.
-Repository Structure:
-Machine Learning project Report.pdf: Detailed report of the project.
-Machine learning R code.R: R script implementing the preprocessing, PCA, and classification algorithms.
-README.md: Overview of the project (this file).
-How to Run:
-Install R and required libraries (caret, factoextra, tidytable, ggplot2, etc.).
-Place the MNIST dataset files in the working directory (train-images-idx3-ubyte, train-labels-idx1-ubyte, etc.).
-Run the R script:
+---
+
+## Methods
+1. **Data Preprocessing:**
+   - Normalized pixel values to range [0, 1].
+   - Checked for missing values and ensured data integrity.
+
+2. **Dimensionality Reduction:**
+   - Applied PCA to identify the number of components capturing 90% variance.
+   - Visualized the data in reduced dimensions.
+
+3. **Classification Algorithms:**
+   - **k-NN:** Experimented with different values of `k` using the elbow method.
+   - **SVM:** Used a radial kernel for classification.
+   - Evaluated both models with and without PCA.
+
+4. **Performance Metrics:**
+   - Accuracy.
+   - Confusion Matrix.
+   - Kappa Statistic.
+   - Error Rate.
+
+---
+
+## Results
+- **k-NN (without PCA):** Accuracy = 90.15%, Optimal k = 3.
+- **SVM (without PCA):** Accuracy = 88.42%.
+- **PCA-enhanced k-NN:** Accuracy = 97.4%, Error Rate = 2.6%.
+- **PCA-enhanced SVM:** Accuracy = 98.17%, Error Rate = 1.83%.
+
+PCA significantly improved the performance of both models.
+
+---
+
+## Setup Instructions
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/mnist-pca-knn-svm.git
+   cd mnist-pca-knn-svm
+Install the required R packages:
+R
+Copy code
+install.packages(c("class", "caret", "factoextra", "tidytable", "ggplot2", "e1071"))
+Set the MNIST dataset files in the appropriate directory as specified in the code.
+Run the R script to execute the analysis:
 R
 Copy code
 source("Machine learning R code.R")
-Key Insights:
-PCA enhances classification accuracy by reducing noise and optimizing feature space.
-k-NN is simple but sensitive to the choice of k.
-SVM is robust for high-dimensional data and slightly outperforms k-NN after PCA.
-Future Improvements:
-Experiment with deep learning models like CNNs for better feature extraction.
-Optimize hyperparameters using cross-validation.
-Incorporate additional dimensionality reduction techniques like LDA.
-This project is a great example of applying classical machine learning techniques to image data and showcases the benefits of dimensionality reduction.
+Key Findings
+PCA reduced dimensionality while retaining essential features, improving model performance.
+PCA-enhanced SVM achieved the highest accuracy (98.17%).
+PCA-enhanced k-NN offers a simpler alternative with slightly lower accuracy but faster training.
+
+Future Work
+Explore advanced models like Convolutional Neural Networks (CNNs) for further accuracy improvements.
+Apply additional feature engineering techniques like LDA or hyperparameter tuning.
+Test the models on other datasets to generalize the findings.
+
+Contributing
+Contributions are welcome! Feel free to fork this repository and submit a pull request. For major changes, please open an issue first to discuss the proposed changes.
+
