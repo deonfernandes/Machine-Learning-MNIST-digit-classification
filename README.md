@@ -58,15 +58,15 @@ PCA significantly improved the performance of both models.
    ```bash
    git clone https://github.com/yourusername/mnist-pca-knn-svm.git
    cd mnist-pca-knn-svm
+   
 Install the required R packages:
-R
-Copy code
 install.packages(c("class", "caret", "factoextra", "tidytable", "ggplot2", "e1071"))
-Set the MNIST dataset files in the appropriate directory as specified in the code.
+
+Set the MNIST dataset files in the appropriate directory.
+
 Run the R script to execute the analysis:
-R
-Copy code
 source("Machine learning R code.R")
+
 Key Findings
 PCA reduced dimensionality while retaining essential features, improving model performance.
 PCA-enhanced SVM achieved the highest accuracy (98.17%).
