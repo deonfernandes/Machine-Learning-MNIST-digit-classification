@@ -63,16 +63,16 @@ Set the MNIST dataset files in the appropriate directory.
 Run the R script to execute the analysis:
 source("Machine learning R code.R")
 
-Key Findings
+## Key Findings
 PCA reduced dimensionality while retaining essential features, improving model performance.
 PCA-enhanced SVM achieved the highest accuracy (98.17%).
 PCA-enhanced k-NN offers a simpler alternative with slightly lower accuracy but faster training.
 
-Future Work
+## Future Work
 Explore advanced models like Convolutional Neural Networks (CNNs) for further accuracy improvements.
 Apply additional feature engineering techniques like LDA or hyperparameter tuning.
 Test the models on other datasets to generalize the findings.
 
-Contributing
+## Contributing
 Contributions are welcome! Feel free to fork this repository and submit a pull request. For major changes, please open an issue first to discuss the proposed changes.
 
